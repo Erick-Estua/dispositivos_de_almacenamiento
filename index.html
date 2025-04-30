@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TecnoGuía Definitiva</title>
+    <style>
+        :root {
+            --primary: #2A2F4F;
+            --secondary: #917FB3;
+            --accent: #E5BEEC;
+            --background: #FDE2F3;
+            --correct: #28a745;
+            --incorrect: #dc3545;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background);
+            color: var(--primary);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            padding: 100px 20px;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+            margin-bottom: 60px;
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            color: white;
+            margin: 0;
+            text-shadow: 3px 3px 8px rgba(0,0,0,0.2);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .device-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .device-image {
+            width: 90%;
+            max-width: 400px;
+            height: auto;
+            margin: 0 auto 20px;
+            border-radius: 12px;
+            border: 3px solid var(--secondary);
+            object-fit: contain;
+        }
+
+        h2.section-title {
+            font-size: 2.5em;
+            color: var(--primary);
+            text-align: center;
+            margin: 60px 0 40px;
+            position: relative;
+        }
+
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 80px;
+            clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+        }
+
+        .nav-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: var(--secondary);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            margin: 20px 10px;
+            transition: all 0.3s;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .nav-btn:hover {
+            background: var(--accent);
+            color: var(--primary);
+            transform: scale(1.05);
+        }
+
+        #quiz-section {
+            display: none;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+        }
+
+        .pregunta {
+            background: white;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .opciones {
+            margin-top: 20px;
+        }
+
+        .opcion {
+            display: block;
+            padding: 15px;
+            margin: 10px 0;
+            border: 2px solid #eee;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .opcion.correct {
+            background-color: #d4edda;
+            border-color: var(--correct);
+        }
+
+        .opcion.incorrect {
+            background-color: #f8d7da;
+            border-color: var(--incorrect);
+        }
+
+        .opcion:hover {
+            transform: translateX(10px);
+            border-color: var(--secondary);
+        }
+
+        #resultado {
+            text-align: center;
+            padding: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-top: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="main-content">
+        <div class="hero">
+            <h1>Guía Completa de Periféricos</h1>
+            <p>Conocimiento técnico en profundidad</p>
+        </div>
+
+        <div class="container">
+            <!-- Almacenamiento -->
+            <div class="card">
+                <h2 class="section-title">💾 Almacenamiento</h2>
+                <p>Los dispositivos de almacenamiento son componentes esenciales para guardar información digital de forma permanente. Los discos duros tradicionales (HDD) utilizan tecnología magnética con platos giratorios que permiten capacidades hasta 20TB, siendo ideales para respaldo masivo de datos. Por otro lado, las unidades de estado sólido (SSD) emplean memoria flash NAND, ofreciendo velocidades de lectura/escritura superiores a 5000 MB/s, lo que las hace perfectas para aplicaciones que requieren rápido acceso a datos.</p>
+
+                <div class="grid">
+                    <div class="device-card">
+                        <img src="HDD.jpg" alt="HDD" class="device-image">
+                        <h3>Disco Duro Externo</h3>
+                        <p>Un ejemplo destacado es el Western Digital My Book de 18TB, que utiliza tecnología HelioSeal para reducir la fricción de los platos, permitiendo mayor densidad de almacenamiento y menor consumo energético. Su velocidad sostenida de 250 MB/s lo hace adecuado para copias de seguridad empresariales.</p>
+                    </div>
+
+                    <div class="device-card">
+                        <img src="SSD.jpg" alt="SSD" class="device-image">
+                        <h3>SSD Portátil</h3>
+                        <p>El Samsung T9 Shield combina velocidad NVMe (2000 MB/s) con resistencia militar (MIL-STD-810H), siendo capaz de soportar caídas desde 3 metros y funcionar en temperaturas extremas (-20°C a 60°C). Incluye cifrado hardware AES de 256-bit para protección de datos sensible.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Procesamiento -->
+            <div class="card">
+                <h2 class="section-title">⚡ Procesamiento</h2>
+                <p>Los componentes de procesamiento especializado descargan tareas específicas de la CPU principal. Las tarjetas gráficas modernas como la NVIDIA RTX 4090 contienen 16,384 núcleos CUDA y 24GB de memoria GDDR6X, permitiendo renderizar escenas 3D complejas en tiempo real. Por otro lado, unidades de procesamiento tensor (TPU) como el Google Coral USB aceleran operaciones de inteligencia artificial hasta 4 TOPS (billones de operaciones por segundo).</p>
+
+                <div class="grid">
+                    <div class="device-card">
+                        <img src="GPU.png" alt="GPU" class="device-image">
+                        <h3>Tarjeta Gráfica</h3>
+                        <p>La AMD Radeon RX 7900 XTX utiliza arquitectura RDNA 3 con chiplet de 5nm, ofreciendo 61 TFLOPS de potencia bruta. Su sistema de enfriamiento vapor chamber gestiona eficientemente los 355W de consumo, manteniendo temperaturas bajo 75°C incluso bajo carga extrema.</p>
+                    </div>
+
+                    <div class="device-card">
+                        <img src="mejores-tarjetas-sonido-1536x1078.jpg" alt="Sonido" class="device-image">
+                        <h3>Procesador de Audio</h3>
+                        <p>La interfaz Universal Audio Apollo Twin X proporciona procesamiento DSP en tiempo real con latencia de 0.7ms, permitiendo aplicar efectos de estudio profesional durante la grabación. Incluye emulaciones precisas de equipos analógicos clásicos mediante tecnología de modelado físico.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controladores (Versión Simplificada) -->
+            <div class="card">
+                <h2 class="section-title">🔌 Controladores</h2>
+                <p>Los controladores son programas que permiten la comunicación entre el sistema operativo y los dispositivos hardware. Actúan como traductores, convirtiendo las instrucciones del sistema en comandos que el hardware puede entender. Son esenciales porque sin ellos, componentes como tarjetas gráficas, impresoras o discos duros no funcionarían correctamente. Los controladores se actualizan regularmente para mejorar el rendimiento, añadir nuevas funciones y corregir problemas de compatibilidad.</p>
+
+                <div class="grid">
+                    <div class="device-card">
+                        <img src="Captura de pantalla 2025-04-29 230750.png" alt="Drivers" class="device-image">
+                        <h3>Gestión de Drivers</h3>
+                        <p>El Administrador de dispositivos en Windows ayuda a ver y actualizar los controladores. Cuando un dispositivo no funciona bien, muchas veces se soluciona actualizando su controlador desde esta herramienta.</p>
+                    </div>
+
+                    <div class="device-card">
+                        <img src="actualizacion de drivers.png" alt="Control" class="device-image">
+                        <h3>Actualizaciones Importantes</h3>
+                        <p>Los mandos modernos como el de Xbox Series X requieren controladores actualizados para aprovechar funciones como la vibración precisa o los gatillos adaptables en diferentes juegos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <button class="nav-btn" onclick="showQuiz()">Cuestionario →</button>
+        </footer>
+    </div>
+
+    <!-- CUESTIONARIO -->
+    <div id="quiz-section">
+        <div class="hero">
+            <h1>Cuestionario Tecnológico</h1>
+            <p>10 preguntas sobre dispositivos periféricos</p>
+        </div>
+
+        <div class="container">
+            <form id="quiz-form">
+                <!-- Pregunta 1 -->
+                <div class="pregunta">
+                    <h3>1. ¿Qué dispositivo almacena datos permanentemente?</h3>
+                    <div class="opciones">
+                        <label class="opcion"><input type="radio" name="q1" required> Memoria RAM</label>
+                        <label class="opcion"><input type="radio" name="q1"> Procesador de audio</label>
+                        <label class="opcion"><input type="radio" name="q1" data-correct="true"> Disco duro HDD</label>
+                        <label class="opcion"><input type="radio" name="q1"> Tarjeta gráfica</label>
+                    </div>
+                </div>
+
+                <!-- Pregunta 2 -->
+                <div class="pregunta">
+                    <h3>2. ¿Qué componente mejora el rendimiento gráfico?</h3>
+                    <div class="opciones">
+                        <label class="opcion"><input type="radio" name="q2" required> Disco duro externo</label>
+                        <label class="opcion"><input type="radio" name="q2" data-correct="true"> Tarjeta gráfica (GPU)</label>
+                        <label class="opcion"><input type="radio" name="q2"> Altavoces</label>
+                        <label class="opcion"><input type="radio" name="q2"> Teclado mecánico</label>
+                    </div>
+                </div>
+
+                <!-- Pregunta 3 -->
+                <div class="pregunta">
+                    <h3>3. Ventaja principal de un SSD:</h3>
+                    <div class="opciones">
+                        <label class="opcion"><input type="radio" name="q3" required> Menor precio por GB</label>
+                        <label class="opcion"><input type="radio" name="q3"> Mayor capacidad</label>
+                        <label class="opcion"><input type="radio" name="q3"> Más resistencia al agua</label>
+                        <label class="opcion"><input type="radio" name="q3" data-correct="true"> Mayor velocidad de acceso</label>
+                    </div>
+                </div>
+
+                <!-- Pregunta 4 -->
+                <div class="pregunta">
+                    <h3>4. ¿Para qué sirve un disco duro externo?</h3>
+                    <div class="opciones">
+                        <label class="opcion"><input type="radio" name="q4" required data-correct="true"> Hacer copias de seguridad</label>
+                        <label class="opcion"><input type="radio" name="q4"> Controlar el mouse</label>
+                        <label class="opcion"><input type="radio" name="q4"> Procesar vídeos 4K</label>
+                        <label class="opcion"><input type="radio" name="q4"> Mejorar la velocidad de internet</label>
+                    </div>
+                </div>
+
+                <!-- Pregunta 5 -->
+                <div class="pregunta">
+                    <h3>5. ¿Qué dispositivo es volátil?</h3>
+                    <div class="opciones">
+                        <label class="opcion"><input type="radio" name="q5" required> Unidad USB</label>
+                        <label class="opcion"><input type="radio" name="q5" data-correct="true"> Memoria RAM</label>
+                        <label class="opcion"><input type="radio" name="q5"> Tarjeta gráfica</label>
+                        <label class="opcion"><input type="radio" name="q5"> Disco SSD</label>
+                    </div>
+                </div>
+
+                <!-- Pregunta 6 -->
+                <div class="pregunta">
+                    <h3>6. ¿Qué mejora la velocidad de arranque?</h3>
+                    <div class="opciones">
+                        <label class="opcion"><input type="radio" name="q6" required> Actualizar el teclado</label>
+                        <label class="opcion"><input type="radio" name="q6" data-correct="true"> Usar un SSD</label>
+                        <label class="opcion"><input type="radio" name="q6"> Instalar altavoces</label>
+                        <label class="opcion"><input type="radio" name="q6"> Añadir más RAM</label>
+                    </div>
+                </div>
+
+                <!-- Pregunta 7 -->
+                <div class="pregunta">
+                    <h3>7. ¿Qué dispositivo procesa gráficos 3D?</h3>
+                    <div class="opciones">
+                        <label class="opcion"><input type="radio" name="q7" required> Micrófono</label>
+                        <label class="opcion"><input type="radio" name="q7"> Impresora</label>
+                        <label class="opcion"><input type="radio" name="q7" data-correct="true"> Tarjeta gráfica</label>
+                        <label class="opcion"><input type="radio" name="q7"> Disco duro</label>
+                    </div>
+                </div>
+
+                <!-- Pregunta 8 -->
+                <div class="pregunta">
+                    <h3>8. ¿Qué conexión usan los discos externos?</h3>
+                    <div class="opciones">
+                        <label class="opcion"><input type="radio" name="q8" required> Ethernet</label>
+                        <label class="opcion"><input type="radio" name="q8" data-correct="true"> USB</label>
+                        <label class="opcion"><input type="radio" name="q8"> Bluetooth</label>
+                        <label class="opcion"><input type="radio" name="q8"> HDMI</label>
+                    </div>
+                </div>
+
+                <!-- Pregunta 9 -->
+                <div class="pregunta">
+                    <h3>9. ¿Qué componente es de almacenamiento?</h3>
+                    <div class="opciones">
+                        <label class="opcion"><input type="radio" name="q9" required> Monitor</label>
+                        <label class="opcion"><input type="radio" name="q9"> Mouse</label>
+                        <label class="opcion"><input type="radio" name="q9" data-correct="true"> Unidad USB</label>
+                        <label class="opcion"><input type="radio" name="q9"> Procesador</label>
+                    </div>
+                </div>
+
+                <!-- Pregunta 10 -->
+                <div class="pregunta">
+                    <h3>10. ¿Qué mide la velocidad de un SSD?</h3>
+                    <div class="opciones">
+                        <label class="opcion"><input type="radio" name="q10" required> DPI del mouse</label>
+                        <label class="opcion"><input type="radio" name="q10"> Píxeles del monitor</label>
+                        <label class="opcion"><input type="radio" name="q10" data-correct="true"> MB/s de transferencia</label>
+                        <label class="opcion"><input type="radio" name="q10"> GHz del procesador</label>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin: 40px 0;">
+                    <button type="submit" class="nav-btn">Enviar Respuestas</button>
+                    <button type="button" class="nav-btn" onclick="showMain()">← Volver al contenido</button>
+                </div>
+                <div id="resultado"></div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function showQuiz() {
+            document.getElementById('main-content').style.display = 'none';
+            document.getElementById('quiz-section').style.display = 'block';
+            window.scrollTo(0, 0);
+        }
+
+        function showMain() {
+            document.getElementById('quiz-section').style.display = 'none';
+            document.getElementById('main-content').style.display = 'block';
+            window.scrollTo(0, 0);
+        }
+
+        // Sistema de retroalimentación
+        document.querySelectorAll('input[type="radio"]').forEach(input => {
+            input.addEventListener('change', function() {
+                const question = this.closest('.pregunta');
+                question.querySelectorAll('.opcion').forEach(opcion => {
+                    opcion.classList.remove('correct', 'incorrect');
+                });
+
+                if (this.dataset.correct === 'true') {
+                    this.parentElement.classList.add('correct');
+                } else {
+                    this.parentElement.classList.add('incorrect');
+                }
+            });
+        });
+
+        // Sistema de puntuación
+        document.getElementById('quiz-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const totalPreguntas = document.querySelectorAll('.pregunta').length;
+            const respuestasCorrectas = document.querySelectorAll('input[type="radio"][data-correct="true"]:checked').length;
+            const faltanResponder = totalPreguntas - document.querySelectorAll('input[type="radio"]:checked').length;
+
+            if (faltanResponder > 0) {
+                alert(`¡Faltan ${faltanResponder} pregunta(s) por responder!`);
+                return;
+            }
+
+            const resultadoHTML = `
+                <h3>🏆 Resultado Final</h3>
+                <p>✅ Correctas: ${respuestasCorrectas}/${totalPreguntas}</p>
+                <p>❌ Incorrectas: ${totalPreguntas - respuestasCorrectas}/${totalPreguntas}</p>
+                <p>📊 Porcentaje de aciertos: ${Math.round((respuestasCorrectas/totalPreguntas)*100)}%</p>
+                <p>${respuestasCorrectas >= 7 ? '🎉 ¡Excelente trabajo!' : '💪 ¡Sigue practicando!'}</p>
+            `;
+
+            document.getElementById('resultado').innerHTML = resultadoHTML;
+            window.scrollTo(0, document.body.scrollHeight);
+        });
+    </script>
+</body>
+</html>
